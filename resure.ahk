@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -11,17 +11,6 @@ return
 
 ::btw::by the way
 
-; Play/Pause
-^!n::Media_Play_Pause
+!^Up:: Run, "C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe" /1:IncControl 10 5 /2:IncControl 10 5
 
-; Previous Track
-^!h::Media_Prev
-
-; Next Track
-^!l::Media_Next
-
-; Volume Up
-^!k::Volume_Up
-
-; Volume Down
-^!j::Volume_Down
+!^Down:: Run, "C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe" /1:DecControl 10 5 /2:DecControl 10 5
