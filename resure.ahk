@@ -14,3 +14,18 @@ return
 !^Up:: Run, "C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe" /1:IncControl 10 5 /2:IncControl 10 5
 
 !^Down:: Run, "C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe" /1:DecControl 10 5 /2:DecControl 10 5
+
+
+CapsLock & p::Send {Up}
+CapsLock & n::Send {Down}
+CapsLock & f::Send {Right}
+CapsLock & b::Send {Left}
+
+CapsLock & e::Send {End}
+CapsLock & a::Send {Home}
+CapsLock & g::Send {PgUp}
+CapsLock & v::Send {PgDn}
+
+CapsLock & s::Send ^s
+
+CapsLock::Send {LWin}
