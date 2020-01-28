@@ -29,3 +29,39 @@ CapsLock & v::Send {PgDn}
 CapsLock & s::Send ^s
 
 CapsLock::Send {LWin}
+
+
+CapsLock & l::
+If GetKeyState("Alt")
+ Send {Media_Next}
+Return
+
+CapsLock & h::
+If GetKeyState("Alt")
+ Send {Media_Prev}
+Return
+
+CapsLock & j::
+If GetKeyState("Alt")
+ Send {Volume_Down}
+Return
+
+CapsLock & k::
+If GetKeyState("Alt")
+ Send {Volume_Up}
+Return
+
+CapsLock & m::
+If GetKeyState("Alt")
+ Send {Volume_Mute}
+Return
+
+CapsLock & i::
+If GetKeyState("Alt")
+ Run, "C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe" /1:IncControl 10 5 /2:IncControl 10 5
+Return
+
+CapsLock & u::
+If GetKeyState("Alt")
+ Run, "C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe" /1:DecControl 10 5 /2:DecControl 10 5
+Return
