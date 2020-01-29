@@ -77,12 +77,14 @@ Alt & ]::
 If GetKeyState("Shift")
  Send {CtrlDown}{Tab}{CtrlUp}
 Else
- Send {]}
+;  Send {]}
+ Send {Browser_Forward}
 Return
 
 Alt & [::
 If GetKeyState("Shift")
  Send {CtrlDown}{ShiftDown}{Tab}{ShiftUp}{CtrlUp}
 Else
- Send {[}
+;  Send {[}
+ Send {Browser_Back}
 Return
