@@ -72,3 +72,17 @@ CapsLock & u::
 If GetKeyState("Alt")
  Run, "C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe" /1:DecControl 10 5 /2:DecControl 10 5
 Return
+
+Alt & ]::
+If GetKeyState("Shift")
+ Send {CtrlDown}{Tab}{CtrlUp}
+Else
+ Send {]}
+Return
+
+Alt & [::
+If GetKeyState("Shift")
+ Send {CtrlDown}{ShiftDown}{Tab}{ShiftUp}{CtrlUp}
+Else
+ Send {[}
+Return
