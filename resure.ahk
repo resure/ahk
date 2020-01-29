@@ -17,7 +17,7 @@ return
 
 
 CapsLock & p::Send {Up}
-CapsLock & n::Send {Down}
+; CapsLock & n::Send {Down}
 CapsLock & f::Send {Right}
 CapsLock & b::Send {Left}
 
@@ -39,6 +39,13 @@ Return
 CapsLock & h::
 If GetKeyState("Alt")
  Send {Media_Prev}
+Return
+
+CapsLock & n::
+If GetKeyState("Alt")
+ Send {Media_Play_Pause}
+Else
+ Send {Down}
 Return
 
 CapsLock & j::
